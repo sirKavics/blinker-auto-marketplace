@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>blinker</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/30b5de38f9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section id="landing-page">
@@ -19,7 +23,9 @@
               <a href="#" class="nav__link--anchor link__hover-effect">Home</a>
             </li>
             <li class="nav__link">
-              <a href="#" class="nav__link--anchor link__hover-effect">Find your car</a>
+              <a href="#" class="nav__link--anchor link__hover-effect"
+                >Find your car</a
+              >
             </li>
             <li class="nav__link">
               <a href="#" class="nav__link--anchor btn-contact">CONTACT</a>
@@ -28,8 +34,22 @@
         </div>
       </nav>
       <header class="header">
-        <div class="header content">
-
+        <div class="header__content">
+          <h1 class="title">
+            Portugal's most awarded <br />car subscription platform
+          </h1>
+          <h2 class="sub-title light-blue">
+            FIND YOUR DREAM CAR WITH <span class="blue">BLINKER</span>
+          </h2>
+          <div class="search__input--wrapper">
+            <input class="search__input" type="text" placeholder="Search by Model, Make or Keyword" />
+            <button class="btn__search">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="landing__animation">
+            
+          </div>
         </div>
       </header>
     </section>
