@@ -28,6 +28,10 @@ section {
     color: #1b78a6;
 }
 
+.no-cursor {
+    cursor: not-allowed;
+}
+
 /*
 
 NAVIGATION
@@ -157,6 +161,7 @@ LANDING PAGE
 
 .search__input::placeholder {
     color: #1b78a672;
+    
 }
 
 .btn__search {
@@ -165,6 +170,12 @@ LANDING PAGE
     border-radius: 20px;
     border: none;
     background-color: #135677;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.btn__search:hover {
+    background-color: #ffbf73;
 }
 
 .fa-search {
@@ -222,13 +233,11 @@ ANIMATION
 }
 
 .road__container {
-    display: inline-block;
     justify-content: center;
 }
 
 .road__slide {
     display: inline-block;
-    /* animation: road-loop 2s linear infinite; */
 }
 
 .road__img {
@@ -236,6 +245,7 @@ ANIMATION
     width: 100%;
     z-index: 5;
     bottom: 25px;
+    animation: road-loop 4s linear infinite;
 }
 
 @keyframes road-loop {
