@@ -119,10 +119,7 @@ LANDING PAGE
 
 */
 
-.header {
-    letter-spacing: 1px;
-    padding: 10px 20px;
-}
+
 
 .header__content {
     display: flex;
@@ -130,12 +127,13 @@ LANDING PAGE
     align-items: center;
     max-width: 730px;
     margin: 0 auto;
+    letter-spacing: 1px;
 }
 
 .title {
     font-size: 60px;
     color: #135677;
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 
 .sub-title {
@@ -172,4 +170,105 @@ LANDING PAGE
 .fa-search {
     color: white;
     font-size: 32px;
+}
+
+/* 
+
+ANIMATION
+
+*/
+
+.landing__animation--row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 572px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.animation__content {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.car__container {
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.car-chassi {
+    position: absolute;
+    width: 45%;
+    bottom: 62px;
+    z-index: 4;
+}
+
+.car-wheel {
+    position: absolute;
+    width: 9%;
+    bottom: 25px;
+    z-index: 5;
+}
+
+.car-wheel__front {
+    right: 338px;
+}
+
+.car-wheel__rear {
+    left: 320px;
+}
+
+.road__container {
+    display: inline-block;
+    justify-content: center;
+}
+
+.road__slide {
+    display: inline-block;
+    /* animation: road-loop 2s linear infinite; */
+}
+
+.road__img {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    bottom: 25px;
+}
+
+@keyframes road-loop {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.trees-and-lights {
+    position: absolute;
+    width: 250%;
+    bottom: 25px;
+    z-index: 3;
+}
+
+.clouds {
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+}
+
+.city {
+    position: absolute;
+    width:200%;
+    bottom: 25px;
+    z-index: 1;
+}
+
+.sun {
+    position: absolute;
+    width: 10%;
+    z-index: 2;
 }
