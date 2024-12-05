@@ -151,6 +151,7 @@ header {
     display: flex;
     width: 100%;
     height: 70px;
+    margin-bottom: 80px;
 }
 
 .search__input {
@@ -195,7 +196,7 @@ ANIMATION
     position: relative;
     margin: 0 auto;
     width: 1000px;
-    height: 468px;
+    height: 556px;
     overflow: hidden;
 }
 
@@ -213,7 +214,7 @@ ANIMATION
     width: 530px;
     bottom: 50px;
     z-index: 75;
-    animation: car__loop 800ms infinite linear;
+    animation: car__loop 1000ms infinite linear;
 }
 
 .car-wheel__img {
@@ -237,7 +238,7 @@ ANIMATION
         transform: translateY(0);
     }
     50% {
-        transform: translateY(4px);
+        transform: translateY(5px);
     }
     100% {
         transform: translateY(0);
@@ -251,15 +252,14 @@ ANIMATION
 .road__slide {
     display: inline-block;
     width: 100%;
-    animation: road__loop 2s linear infinite;
+    animation: ani__loop 2s linear infinite;
     margin: 0 5px;
 }
 
 .road__img {
     position: absolute;
     width: 100%;
-    bottom: -453px;
-    z-index: 100;
+    bottom: -476px;
 }
 
 .tree-and-lights__container {
@@ -269,14 +269,13 @@ ANIMATION
 .tree-and-lights__slide {
     display: inline-block;
     width: 100%;
-    animation: road__loop 3.5s linear infinite;
+    animation: ani__loop 3.5s linear infinite;
 }
 
 .tree-and-lights__img {
     position: absolute;
-    width: 90vh;
-    bottom: -427px;
-    z-index: 120;
+    width: 1000px;
+    bottom: -448px;
 }
 
 .city__container {
@@ -286,13 +285,14 @@ ANIMATION
 .city__slide {
     display: inline-block;
     width: 100%;
-    animation: road__loop 10s linear infinite;
+    animation: ani__loop 10s linear infinite;
 }
 
 .city__img {
     position: absolute;
     width:1000px;
-    bottom: -410px;
+    bottom: -436px;
+    z-index: 0;
 }
 
 .clouds__container {
@@ -302,7 +302,7 @@ ANIMATION
 .clouds__slide {
     display: inline-block;
     width: 100%;
-    animation: road__loop 20s linear infinite;
+    animation: ani__loop 20s linear infinite;
 }
 
 .clouds__img {
@@ -312,7 +312,7 @@ ANIMATION
     z-index: 1;
 }
 
-@keyframes road__loop {
+@keyframes ani__loop {
     0% {
         transform: translateX(0);
     }
