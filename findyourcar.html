@@ -3,33 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Assets/favicon.ico" />
+    <link rel="icon" href="/Assets/blinker icon color.png" />
     <title>
-      blinker | Car Subscription Platform for Dealerships | Blinker.com.pt
+      blinker | Car Subscription Platform for Dealerships | blinker.com.pt
     </title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./findyourcar.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/30b5de38f9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav>
+    <div class="navbar">
+      <nav class="nav__fyc">
         <div class="nav__content--wrapper">
-            <figure>
-              <img id="blinker-logo" src="./Assets/blinker logo.svg" alt="" />
-            </figure>
-            <u class="nav__link--list">
-              <li class="nav__link">
-                <a href="#" class="nav__link--anchor link__hover-effect">Home</a>
-              </li>
-              <li class="nav__link">
-                <a href="#" class="nav__link--anchor link__hover-effect"
-                  >Find your car</a
-                >
-              </li>
-              <li class="nav__link">
-                <a href="#" class="nav__link--anchor btn-contact">CONTACT</a>
-              </li>
-            </u>
-          </div>
-    </nav>
+          <figure>
+            <img
+              class="blinker__logo white"
+              src="./Assets/blinker logo white.svg"
+              alt=""
+            />
+          </figure>
+          <u class="nav__link--list">
+            <li class="nav__link nav__link--white">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
+                >Home</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                href="#"
+                class="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
+                >Find your car</a
+              >
+            </li>
+            <li class="nav__link">
+              <a
+                href="#"
+                class="nav__link--anchor btn__contact btn__contact-fyc"
+                >CONTACT</a
+              >
+            </li>
+          </u>
+        </div>
+      </nav>
+      <div class="search__container">
+        <h1 class="search__title">Browse our cars</h1>
+        <div class="search__input--container">
+          <input
+            class="search__input search__fyc-input"
+            type="text"
+            placeholder="Search by Make, Model or Keyword"
+          />
+          <button class="btn__search btn__fyc-search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
