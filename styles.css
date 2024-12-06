@@ -41,10 +41,10 @@ NAVIGATION
 nav {
     display: flex;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1300px;
     height: 164px;
     padding: 0 50px;
+    margin: 0 auto;
 }
 
 .nav__content--wrapper {
@@ -57,7 +57,7 @@ nav {
 #blinker-logo {
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 160px;
 }
 
 .nav__link--list {
@@ -155,7 +155,7 @@ header {
 }
 
 .search__input {
-    width: 75%;
+    width: 80%;
     padding: 0 25px;
     border: none;
     border-radius: 20px;
@@ -168,7 +168,7 @@ header {
 }
 
 .btn__search {
-    width: 25%;
+    width: 20%;
     margin-left: 20px;
     border-radius: 20px;
     border: none;
@@ -196,7 +196,7 @@ ANIMATION
     position: relative;
     margin: 0 auto;
     width: 1000px;
-    height: 556px;
+    height: 572px;
     overflow: hidden;
 }
 
@@ -214,7 +214,7 @@ ANIMATION
     width: 530px;
     bottom: 50px;
     z-index: 75;
-    animation: car__loop 1000ms infinite linear;
+    animation: car__loop 800ms infinite linear;
 }
 
 .car-wheel__img {
@@ -259,7 +259,7 @@ ANIMATION
 .road__img {
     position: absolute;
     width: 100%;
-    bottom: -476px;
+    bottom: -500px;
 }
 
 .tree-and-lights__container {
@@ -275,7 +275,7 @@ ANIMATION
 .tree-and-lights__img {
     position: absolute;
     width: 1000px;
-    bottom: -448px;
+    bottom: -472px;
 }
 
 .city__container {
@@ -291,8 +291,8 @@ ANIMATION
 .city__img {
     position: absolute;
     width:1000px;
-    bottom: -436px;
-    z-index: 0;
+    bottom: -458px;
+    z-index: 1;
 }
 
 .clouds__container {
@@ -308,8 +308,8 @@ ANIMATION
 .clouds__img {
     position: absolute;
     width: 700px;
-    bottom: -75px;
-    z-index: 1;
+    bottom: -48px;
+    z-index: 0;
 }
 
 @keyframes ani__loop {
@@ -329,8 +329,8 @@ ANIMATION
 .sun__img {
     position: absolute;
     width: 100px;
-    z-index: 2;
-    top: 25px;
+    z-index: 1;
+    top: 0;
     animation: sun__loop 5s infinite linear;
 }
 
@@ -339,7 +339,7 @@ ANIMATION
         transform: translateY(0);
     }
     50% {
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     100% {
         transform: translateY(0);
