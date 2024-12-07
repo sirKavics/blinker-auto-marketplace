@@ -140,11 +140,13 @@ header {
     font-size: 60px;
     color: #135677;
     margin: 30px 0;
+    animation: slide-up-fade-in__effect 1200ms ease;
 }
 
 .sub-title {
     font-size: 30px;
     margin-bottom: 70px;
+    animation: slide-up-fade-in__effect 1600ms ease;
 }
 
 .search__input--wrapper {
@@ -152,6 +154,7 @@ header {
     width: 100%;
     height: 70px;
     margin-bottom: 80px;
+    animation: fade-in__effect 1400ms ease;
 }
 
 .search__input {
@@ -186,6 +189,26 @@ header {
     font-size: 32px;
 }
 
+@keyframes slide-up-fade-in__effect {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in__effect {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* 
 
 ANIMATION
@@ -198,6 +221,7 @@ ANIMATION
     width: 1000px;
     height: 572px;
     overflow: hidden;
+    animation: fade-in__effect 2500ms ease;
 }
 
 .animation__content {
@@ -214,7 +238,7 @@ ANIMATION
     width: 530px;
     bottom: 50px;
     z-index: 75;
-    animation: car__loop 800ms infinite linear;
+    animation: car-riding__loop 800ms infinite linear;
 }
 
 .car-wheel__img {
@@ -233,7 +257,7 @@ ANIMATION
     z-index: 100;
 }
 
-@keyframes car__loop {
+@keyframes car-riding__loop {
     0% {
         transform: translateY(0);
     }
@@ -348,6 +372,12 @@ ANIMATION
 
 /* FIND YOUR CAR */
 
+/* 
+
+NAVBAR
+
+*/
+
 .nav__fyc {
     height: 112px;
 
@@ -445,4 +475,16 @@ ANIMATION
 .btn__fyc-search:hover {
     background-color: transparent;
     color: #ffbf73;
+}
+
+/* 
+
+SEARCH RESULTS
+
+*/
+
+.progress__buffer {
+    width: 100%;
+    height: 5px;
+    background-color: #1f96d171;
 }
