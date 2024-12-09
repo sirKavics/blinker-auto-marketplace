@@ -28,6 +28,10 @@ a{
     color: #1b78a6;
 }
 
+.bright-blue {
+    color: #1f96d1;
+}
+
 .no-cursor {
     cursor: not-allowed;
 }
@@ -515,6 +519,7 @@ SEARCH
     font-size: 28px;
     color: #135677;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 
 .price-filter__container {
@@ -525,8 +530,58 @@ SEARCH
 .price-range {
     font-size: 20px;
     letter-spacing: 1px;
-    margin: 0 0 12px;
+    margin-bottom: 12px;
     color: #1f96d1;
+}
+
+.slider__runway--container {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    margin: 22px 0;
+    background-color: #1f96d13d;
+}
+
+.slider__bar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1f96d1;
+}
+
+.slider__button--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -13px;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    /* background-color: #ffbf73; */
+}
+
+.left-slider__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50px;
+    border: 6px solid #1f96d1;
+    background-color: white;
+    z-index: 100;
+}
+
+.right-slider__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50px;
+    border: 6px solid #1f96d1;
+    background-color: white;
+}
+
+.right-slider {
+    left: 100%;
 }
 
 .car__list--container {
@@ -538,47 +593,79 @@ SEARCH
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .car__card {
-    width: 370px;
+    width: 352px;
     height: 500px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin: 24px;
     border: 4px solid #1f96d11d;
     overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.car__card:hover {
+    box-shadow: -8px 8px 20px #1356771b;
+    transform: translateY(-4px);
 }
 
 .car__card--container {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 32px 24px;
+}
+
+.car__img--container {
+    height: 50%;
+    overflow: hidden;
 }
 
 .car__img--wrapper {
-    position: absolute;
-    height: 50%;
+    width: 100%;
     top: 0;
     left: 0;
+    transition: all 300ms ease;
 }
 
 .car__info {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: 50%;
+    bottom: 0;
+    padding: 24px 32px;
 }
 
 .car__name {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .car-specs__container {
-    
+    margin-bottom: 20px;
+}
+
+.car__spec {
+    display: flex;
+    line-height: 34px;
+}
+
+.spec__img {
+    width: 40px;
+    color: #1f96d171;
+}
+
+.spec__info {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .car__price {
-    
+    font-weight: 700;
+    font-size: 22px;
 }

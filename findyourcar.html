@@ -16,11 +16,15 @@
   </head>
   <body>
     <div class="navbar__container">
-        <figure>
-            <img class="nav-bar__img--overlay" src="/Assets/car lot background overlay.jpg" alt="">
-        </figure>
-        <nav class="nav__fyc">
-            <div class="nav__content--wrapper">
+      <figure>
+        <img
+          class="nav-bar__img--overlay"
+          src="/Assets/car lot background overlay.jpg"
+          alt=""
+        />
+      </figure>
+      <nav class="nav__fyc">
+        <div class="nav__content--wrapper">
           <figure>
             <img
               class="blinker__logo white"
@@ -68,44 +72,73 @@
       </div>
     </div>
     <section id="search">
-        <div class="progress__buffer">
-
-        </div>
-        <div id="filter" class="filter__content--wrapper">
-            <h1 class="search-info">Search results for <span class="">"make, model or keyword"</span></h1>
-            <div class="price-filter__container">
-                <h2 class="price-range"> <span class="blue ">Price range:</span> $0 to $100,000</h2>
-            </div>
-        </div>
-        <div id="cars" class="car__list--container">
-            <div class="cars__content--wrapper cursor-pointer">
-                <div class="car__card">
-                    <div class="car__card--container">
-                        <img src="./Assets/toyota__test.jpg" class="car__img--wrapper" alt="">
-                        <div class="car__info">
-                            <p class="car__name light-blue">Car's Name and Year</p>
-                            <div class="car-specs__container">
-                                <div class="car__milage">
-                                    <p class="car-details">Car Milage</p>
-                                </div>
-                                <div class="car__type">
-                                    <p class="car-details">Car Type</p>
-                                </div>
-                                <div class="car__milage">
-                                    <p class="car-details">Transmission</p>
-                                </div>
-                            </div>
-                            <p class="car__price">Price</p>
-                        </div>
-                    </div>
+      <div class="progress__buffer"></div>
+      <div id="filter" class="filter__content--wrapper">
+        <h1 class="search-info">
+          Search results for
+          <span class="bright-blue">"make, model or keyword"</span>
+        </h1>
+        <div class="price-filter__container">
+          <h2 class="price-range">
+            <span class="blue">Price range:</span> $0 to $100,000
+          </h2>
+          <div class="slider">
+            <div class="slider__runway--container">
+                <div class="slider__bar"></div>
+                <div class="slider__button--wrapper cursor-pointer">
+                  <div class="left-slider__button"></div>
                 </div>
-                <div class="car__card"></div>
-                <div class="car__card"></div>
-                <div class="car__card"></div>
-                <div class="car__card"></div>
-                <div class="car__card"></div>
+                <div class="slider__button--wrapper right-slider cursor-pointer">
+                  <div class="right-slider__button"></div>
+                </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div id="cars" class="car__list--container">
+        <div class="cars__content--wrapper">
+          <div class="car__card cursor-pointer">
+            <div class="car__card--container">
+              <figure class="car__img--container">
+                <img
+                  src="./Assets/acura__test.jpg"
+                  class="car__img--wrapper"
+                  alt=""
+                />
+              </figure>
+              <div class="car__info">
+                <p class="car__name light-blue">*Car's Year and Make*</p>
+                <div class="car-specs__container">
+                  <div class="car__spec">
+                    <figure class="spec__img">
+                      <i class="fa-solid fa-gauge-high"></i>
+                    </figure>
+                    <p class="spec__info light-blue">*Car Milage* km</p>
+                  </div>
+                  <div class="car__spec">
+                    <figure class="spec__img">
+                      <i class="fa-solid fa-car-side"></i>
+                    </figure>
+                    <p class="spec__info light-blue">*Car Type*</p>
+                  </div>
+                  <div class="car__spec">
+                    <figure class="spec__img">
+                      <i class="fa-solid fa-gears"></i>
+                    </figure>
+                    <p class="spec__info light-blue">*Transmission*</p>
+                  </div>
+                </div>
+                <p class="car__price light-blue">$*Price*</p>
+              </div>
+            </div>
+          </div>
+          <div class="car__card"></div>
+          <div class="car__card"></div>
+          <div class="car__card"></div>
+          <div class="car__card"></div>
+          <div class="car__card"></div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
