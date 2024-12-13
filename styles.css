@@ -193,6 +193,10 @@ header {
     background-color: #ffbf73;
 }
 
+.btn__search:active {
+    transform: scale(0.95);
+}
+
 .fa-search {
     font-size: 32px;
 }
