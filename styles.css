@@ -673,3 +673,31 @@ SEARCH
     font-weight: 700;
     font-size: 22px;
 }
+
+/* 
+
+RESPONSIVENESS
+
+*/
+
+/* LARGE DESKTOPS AND LAPTOPS */
+
+@media (max-width: 1920px) {
+    nav {
+        height: 128px;
+    }
+
+    .title {
+        font-size: 48px;
+        margin: 0 0 20px 0;
+    }
+
+    .sub-title {
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+
+    .search__input--wrapper {
+        margin: 0 0 52px;
+    }
+}
