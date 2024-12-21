@@ -230,6 +230,7 @@ ANIMATION
 .landing__animation--row {
     position: relative;
     margin: 0 auto;
+    max-width: 1000px;
     width: 1000px;
     height: 572px;
     overflow: hidden;
@@ -237,7 +238,7 @@ ANIMATION
 }
 
 .animation__content {
-    width: 100%;
+    width: 1000px;
 }
 
 .car__container {
@@ -682,12 +683,24 @@ RESPONSIVENESS
 
 /* LARGE DESKTOPS AND LAPTOPS */
 
-@media (max-width: 1920px) {
+@media (max-width: 1200px) {
     
 }
 
-/* 
+/* DEKTOPS */
 
+@media (max-width: 992px) {
+    
+}
 
+/* TABLETS */
 
-*/
+@media (max-width: 768px) {
+    
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 576px) {
+    
+}
