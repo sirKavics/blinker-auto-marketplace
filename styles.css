@@ -152,8 +152,8 @@ header {
 }
 
 .sub-title {
-    font-size: 30px;
-    margin-bottom: 70px;
+    font-size: 32px;
+    margin-bottom: 72px;
     animation: slide-up-fade-in__effect 1600ms ease;
 }
 
@@ -230,8 +230,8 @@ ANIMATION
 .landing__animation--row {
     position: relative;
     margin: 0 auto;
-    max-width: 1000px;
-    width: 1000px;
+    max-width: 996px;
+    width: 996px;
     height: 572px;
     overflow: hidden;
     animation: fade-in__effect 2500ms ease;
@@ -677,20 +677,38 @@ SEARCH
 
 /* 
 
-RESPONSIVENESS
+MEDIA RESPONSIVENESS
 
 */
 
-/* LARGE DESKTOPS AND LAPTOPS */
+/* DEKTOPS AND LAPTOPS */
 
-@media (max-width: 1200px) {
-    
-}
-
-/* DEKTOPS */
-
-@media (max-width: 992px) {
-    
+@media (max-width: 996px) {
+    .title {
+        font-size: 52px;
+    }
+    .sub-title {
+        font-size: 28px;
+        margin-bottom: 56px;
+    }
+    .search__input--wrapper {
+        width: 80%;
+    }
+    .landing__animation--row {
+        width: 768px;
+    }
+    .car-chassi {
+        left: 120px;
+    }
+    .car-wheel__rear {
+        left: 184px;
+    }
+    .car-wheel__front {
+        right: 188px;
+    }
+    .sun__img {
+        left: 350px;
+    }
 }
 
 /* TABLETS */

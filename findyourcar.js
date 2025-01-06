@@ -1,1 +1,4 @@
-console.log('http://developer.kbb.com/idws/1-Default')
+// apiKey = 
+// apiAdress = 
+
+console.log(fetch(`https://freetestapi.com/api/v1/cars`))
