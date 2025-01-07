@@ -116,13 +116,25 @@ nav {
     color: white;
     font-size: 13px;
     letter-spacing: 2px;
-    transition: all 300ms ease;
+    transition: all 400ms ease;
 }
 
 .btn__contact:hover {
     background-color: #1f96d1;
     text-decoration: none;
     color: white;
+}
+
+.menu__btn {
+    border: none;
+    background-color: transparent;
+    color: #135677;
+    font-size: 34px;
+    transition: all 400ms ease;
+}
+
+.menu__btn:hover {
+    color: #1f96d1;
 }
 
 /* 
@@ -714,7 +726,28 @@ MEDIA RESPONSIVENESS
 /* TABLETS */
 
 @media (max-width: 768px) {
-    
+    .title {
+        font-size: 44px;
+    }
+    .sub-title {
+        font-size: 24px;
+        margin-bottom: 56px;
+    }
+    .landing__animation--row {
+        width: 576px;
+    }
+    .car-chassi {
+        left: 22px;
+    }
+    .car-wheel__rear {
+        left: 84px;
+    }
+    .car-wheel__front {
+        right: 98px;
+    }
+    .sun__img {
+        left: 250px;
+    }
 }
 
 /* MOBILE PHONES */
