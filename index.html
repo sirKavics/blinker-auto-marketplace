@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/Assets/blinker icon color.png">
-    <title>blinker | Car Subscription Platform for Dealerships | blinker.com.pt</title>
+    <link rel="icon" href="/Assets/blinker icon color.png" />
+    <title>
+      blinker | Car Subscription Platform for Dealerships | blinker.com.pt
+    </title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script src="index.js" defer></script>
     <script
       src="https://kit.fontawesome.com/30b5de38f9.js"
       crossorigin="anonymous"
@@ -17,7 +19,11 @@
       <nav>
         <div class="nav__content--wrapper">
           <figure>
-            <img class="blinker__logo" src="./Assets/blinker logo color.svg" alt="" />
+            <img
+              class="blinker__logo"
+              src="./Assets/blinker logo color.svg"
+              alt=""
+            />
           </figure>
           <u class="nav__link--list">
             <li class="nav__link">
@@ -32,15 +38,28 @@
               <a href="#" class="nav__link--anchor btn__contact">CONTACT</a>
             </li>
           </u>
-          <div class="menu__btn--container">
-            <button class="menu__btn cursor-pointer">
+        </div>
+          <div class="menu__container">
+            <button class="menu__btn cursor-pointer" onclick="openMenu()">
               <i class="fa-solid fa-bars"></i>
             </button>
+            <div class="menu__backdrop">
+              <button class="menu__btn cursor-pointer menu__btn--close" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <ul class="menu__links">
+                <li class="menu__list">
+                  <a href="index.html" class="menu__link link__hover-effect">Home</a>
+                </li>
+                <li class="menu__list">
+                  <a href="findyourcar.html" class="menu__link link__hover-effect">Find your car</a>
+                </li>
+                <li class="menu__list">
+                  <a href="#" class="menu__link--contact btn__contact no-cursor">CONTACT</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="menu__backdrop">
-            
-          </div>
-        </div>
       </nav>
       <header>
         <div class="header__content">
@@ -51,7 +70,11 @@
             FIND YOUR DREAM CAR WITH <span class="blue">BLINKER</span>
           </h2>
           <div class="search__input--wrapper">
-            <input class="search__input" type="text" placeholder="Search by Model, Make or Keyword" />
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search by Model, Make or Keyword"
+            />
             <button class="btn__search">
               <i class="fas fa-search"></i>
             </button>
@@ -60,44 +83,64 @@
         <div class="landing__animation--row">
           <div class="animation__content">
             <div class="car__container">
-              <img class="car-chassi" src="./Assets/ani-car-chassi.svg" alt="">
-              <img class="car-wheel__img car-wheel__front" src="./Assets/ani-wheel.svg" alt="">
-              <img class="car-wheel__img car-wheel__rear" src="./Assets/ani-wheel.svg" alt="">
+              <img
+                class="car-chassi"
+                src="./Assets/ani-car-chassi.svg"
+                alt=""
+              />
+              <img
+                class="car-wheel__img car-wheel__front"
+                src="./Assets/ani-wheel.svg"
+                alt=""
+              />
+              <img
+                class="car-wheel__img car-wheel__rear"
+                src="./Assets/ani-wheel.svg"
+                alt=""
+              />
             </div>
             <div class="road__container">
               <div class="road__slide">
-                <img class="road__img" src="./Assets/ani-road.svg" alt="">           
-              </div>   
+                <img class="road__img" src="./Assets/ani-road.svg" alt="" />
+              </div>
               <div class="road__slide">
-                <img class="road__img" src="./Assets/ani-road.svg" alt="">           
-              </div>   
+                <img class="road__img" src="./Assets/ani-road.svg" alt="" />
+              </div>
             </div>
             <div class="tree-and-lights__container">
               <div class="tree-and-lights__slide">
-                <img class="tree-and-lights__img" src="./Assets/ani-tree-and-lights.svg" alt="">
+                <img
+                  class="tree-and-lights__img"
+                  src="./Assets/ani-tree-and-lights.svg"
+                  alt=""
+                />
               </div>
               <div class="tree-and-lights__slide">
-                <img class="tree-and-lights__img" src="./Assets/ani-tree-and-lights.svg" alt="">
+                <img
+                  class="tree-and-lights__img"
+                  src="./Assets/ani-tree-and-lights.svg"
+                  alt=""
+                />
               </div>
             </div>
             <div class="city__container">
               <div class="city__slide">
-                <img class="city__img" src="./Assets/ani-city.svg" alt="">
+                <img class="city__img" src="./Assets/ani-city.svg" alt="" />
               </div>
               <div class="city__slide">
-                <img class="city__img" src="./Assets/ani-city.svg" alt="">
+                <img class="city__img" src="./Assets/ani-city.svg" alt="" />
               </div>
             </div>
             <div class="clouds__container">
               <div class="clouds__slide">
-                <img class="clouds__img" src="./Assets/ani-clouds.svg" alt="">
+                <img class="clouds__img" src="./Assets/ani-clouds.svg" alt="" />
               </div>
               <div class="clouds__slide">
-                <img class="clouds__img" src="./Assets/ani-clouds.svg" alt="">
+                <img class="clouds__img" src="./Assets/ani-clouds.svg" alt="" />
               </div>
             </div>
             <div class="sun__container">
-              <img class="sun__img" src="./Assets/ani-sun.svg" alt="">
+              <img class="sun__img" src="./Assets/ani-sun.svg" alt="" />
             </div>
           </div>
         </div>

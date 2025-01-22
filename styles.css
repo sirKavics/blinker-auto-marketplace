@@ -57,6 +57,7 @@ nav {
 
 .nav__content--wrapper {
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,6 +70,8 @@ nav {
 }
 
 .nav__link--list {
+    position: absolute;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,16 +128,78 @@ nav {
     color: white;
 }
 
+.menu__container {
+    visibility: hidden;
+}
+
 .menu__btn {
+    position: absolute;
     border: none;
     background-color: transparent;
     color: #135677;
-    font-size: 34px;
+    font-size: 40px;
+    right: 100px;
+    top: 52px;
+    padding: 8px;
     transition: all 400ms ease;
 }
 
 .menu__btn:hover {
     color: #1f96d1;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #e0f4fb;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 752px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items:center
+}
+
+.menu__list {
+    padding: 24px 0;
+}
+
+.menu__link {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #135677;
+}
+
+.menu__link:hover {
+    color: #1b78a6;
+}
+
+.menu__link--contact {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    margin: 20px 0 0 ;
+}
+
+.menu__btn--close {
+    position: absolute;
+    font-size: 48px;
+    right: 99px;
+    top: 48px;
 }
 
 /* 
@@ -696,6 +761,15 @@ MEDIA RESPONSIVENESS
 /* DEKTOPS AND LAPTOPS */
 
 @media (max-width: 996px) {
+    .nav__link--anchor {
+        visibility: hidden;
+    }
+    .menu__container {
+        visibility: visible;
+    }
+    nav {
+        width: 90%;
+    }
     .title {
         font-size: 52px;
     }
@@ -753,5 +827,5 @@ MEDIA RESPONSIVENESS
 /* MOBILE PHONES */
 
 @media (max-width: 576px) {
-    
+
 }

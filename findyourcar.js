@@ -1,4 +1,13 @@
 // apiKey = 
 // apiAdress = 
 
-console.log(fetch(`https://freetestapi.com/api/v1/cars`))
+// console.log(carData)
+
+async function main() {
+    const cars = await fetch(`https://parseapi.back4app.com/classes/Car_Model_List?count=1&limit=10`)
+    const carsData = await cars.json();
+}
+
+main();
+
+console.log(carsData)
