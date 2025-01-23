@@ -129,7 +129,7 @@ nav {
 }
 
 .menu__container {
-    visibility: hidden;
+    display: none;
 }
 
 .menu__btn {
@@ -159,11 +159,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    transition: all 400ms ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .menu--open .menu__backdrop {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .menu__links {
@@ -174,6 +177,10 @@ nav {
 
 .menu__list {
     padding: 24px 0;
+}
+
+.menu__list--contact {
+    margin-top: 12px
 }
 
 .menu__link {
@@ -192,7 +199,6 @@ nav {
     font-weight: 700;
     letter-spacing: 1px;
     color: white;
-    margin: 20px 0 0 ;
 }
 
 .menu__btn--close {
@@ -765,7 +771,7 @@ MEDIA RESPONSIVENESS
         visibility: hidden;
     }
     .menu__container {
-        visibility: visible;
+        display: block;
     }
     nav {
         width: 90%;
@@ -800,12 +806,22 @@ MEDIA RESPONSIVENESS
 /* TABLETS */
 
 @media (max-width: 768px) {
+    .menu__btn {
+        right: 80px;
+    }
     .title {
         font-size: 44px;
     }
     .sub-title {
         font-size: 24px;
         margin-bottom: 56px;
+    }
+    .search__input--wrapper {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+    .search__input::placeholder {
+        font-size: 20px;
     }
     .landing__animation--row {
         width: 576px;
@@ -827,5 +843,152 @@ MEDIA RESPONSIVENESS
 /* MOBILE PHONES */
 
 @media (max-width: 576px) {
+    nav {
+        width: 100%;
+        height: 132px;
+        margin: 0;
+    }
+    .menu__btn {
+        right: 50px;
+        top: 35px;
+    }
+    .menu__btn--close {
+        top: 30px;
+        right: 49px;
+    }
+    .menu__backdrop {
+        height: 456px;
+    }
+    .header__content {
+        margin: 0 32px;
+    }
+    .title {
+        font-size: 30px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .sub-title {
+        font-size: 16px;
+        margin-bottom: 42px;
+        text-align: center;
 
+    }
+    .search__input--wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .search__input {
+        width: 100%;
+        height: 52px;
+        margin-bottom: 16px;
+    }
+    .search__input::placeholder {
+        font-size: 18px;
+        text-align: center;
+    }
+    .btn__search {
+        margin: 0;
+        height: 50px;
+        width: 112px;
+    }
+    .landing__animation--row {
+        width: 420px;
+        height: 400px;
+    }
+    .car-chassi {
+        width: 360px;
+        left: 30px;
+        bottom: 35px;
+    }
+    .car-wheel__img {
+        width: 75px;
+    }
+    .car-wheel__front {
+        left: 265px;
+    }
+    .car-wheel__rear {
+        left: 80px;
+    }
+    .road__img {
+        width: 80%;
+        top: 335px;
+    }
+    .tree-and-lights__img {
+        width: 700px;
+        top: 57px;
+    }
+    .city__img {
+        width: 800px;
+        top: -10px;
+    }
+    .clouds__img {
+        width: 400px;
+        top: -60px;
+    }
+    .sun__img {
+        width: 70px;
+        left: 175px;
+    }
+}
+
+/* SMALL MOBILE PHONES */
+
+@media (max-width: 420px) {
+    .blinker__logo {
+        width: 120px;
+    }
+    .menu__backdrop {
+        height: 550px;
+    }
+    .title {
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .sub-title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .landing__animation--row {
+        width: 320px;
+        height: 340px;
+    }
+    .car-chassi {
+        width: 250px;
+        left: 35px;
+        bottom: 32px;
+    }
+    .car-wheel__img {
+        width: 52px;
+        bottom: 10px;
+    }
+    .car-wheel__front {
+        left: 198px;
+    }
+    .car-wheel__rear {
+        left: 70px;
+    }
+    .road__img {
+        width: 60%;
+        top: 285px;
+    }
+    .city__img {
+        width: 600px;
+        top: 18px;
+    }
+    .tree-and-lights__img {
+        width: 500px;
+        top: 81px;
+    }
+    .sun__img {
+        width: 60px;
+        left: 133px;
+    }
+    .clouds__img {
+        width: 400px;
+        top: -60px;
+    }
 }

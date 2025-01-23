@@ -39,27 +39,36 @@
             </li>
           </u>
         </div>
-          <div class="menu__container">
-            <button class="menu__btn cursor-pointer" onclick="openMenu()">
-              <i class="fa-solid fa-bars"></i>
+        <div class="menu__container">
+          <button class="menu__btn cursor-pointer" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button
+              class="menu__btn cursor-pointer menu__btn--close"
+              onclick="closeMenu()"
+            >
+              <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="menu__backdrop">
-              <button class="menu__btn cursor-pointer menu__btn--close" onclick="closeMenu()">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-              <ul class="menu__links">
-                <li class="menu__list">
-                  <a href="index.html" class="menu__link link__hover-effect">Home</a>
-                </li>
-                <li class="menu__list">
-                  <a href="findyourcar.html" class="menu__link link__hover-effect">Find your car</a>
-                </li>
-                <li class="menu__list">
-                  <a href="#" class="menu__link--contact btn__contact no-cursor">CONTACT</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="index.html" class="menu__link link__hover-effect"
+                  >Home</a
+                >
+              </li>
+              <li class="menu__list">
+                <a href="findyourcar.html" class="menu__link link__hover-effect"
+                  >Find your car</a
+                >
+              </li>
+              <li class="menu__list menu__list--contact">
+                <a href="#" class="menu__link--contact btn__contact no-cursor"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
           </div>
+        </div>
       </nav>
       <header>
         <div class="header__content">
