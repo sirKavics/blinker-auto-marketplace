@@ -8,7 +8,7 @@
       blinker | Car Subscription Platform for Dealerships | blinker.com.pt
     </title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./findyourcar.js" defer></script>
+    <script src="findyourcar.js" defer></script>
     <script
       src="https://kit.fontawesome.com/30b5de38f9.js"
       crossorigin="anonymous"
@@ -32,7 +32,7 @@
               alt=""
             />
           </figure>
-          <u class="nav__link--list">
+          <ul class="nav__link--list">
             <li class="nav__link nav__link--white">
               <a
                 href="#"
@@ -50,22 +50,55 @@
             <li class="nav__link">
               <a
                 href="#"
-                class="nav__link--anchor btn__contact btn__contact-fyc"
+                class="nav__link--anchor btn__contact fyc-btn__contact"
                 >CONTACT</a
               >
             </li>
-          </u>
+          </ul>
+        </div>
+        <div class="menu__container">
+          <button
+            class="menu__btn fyc-menu__btn cursor-pointer"
+            onclick="openMenu()"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop fyc__menu--backdrop">
+            <button
+              class="menu__btn fyc-menu__btn cursor-pointer menu__btn--close fyc-menu__btn--close"
+              onclick="closeMenu()"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="index.html" class="menu__link fyc-menu__link link__hover-effect"
+                  >Home</a
+                >
+              </li>
+              <li class="menu__list">
+                <a href="findyourcar.html" class="menu__link fyc-menu__link link__hover-effect"
+                  >Find your car</a
+                >
+              </li>
+              <li class="menu__list menu__list--contact">
+                <a href="#" class="menu__link--contact btn__contact fyc-btn__contact no-cursor"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div class="search__container">
         <h1 class="search__title">Browse our cars</h1>
         <div class="search__input--container">
           <input
-            class="search__input search__fyc-input"
+            class="search__input fyc-search__input"
             type="text"
             placeholder="Search by Make, Model or Keyword"
           />
-          <button class="btn__search btn__fyc-search">
+          <button class="btn__search fyc-btn__search">
             <i class="fas fa-search"></i>
           </button>
         </div>
@@ -84,13 +117,13 @@
           </h2>
           <div class="slider">
             <div class="slider__runway--container">
-                <div class="slider__bar"></div>
-                <div class="slider__button--wrapper cursor-pointer">
-                  <div class="left-slider__button"></div>
-                </div>
-                <div class="slider__button--wrapper right-slider cursor-pointer">
-                  <div class="right-slider__button"></div>
-                </div>
+              <div class="slider__bar"></div>
+              <div class="slider__button--wrapper cursor-pointer">
+                <div class="left-slider__button"></div>
+              </div>
+              <div class="slider__button--wrapper right-slider cursor-pointer">
+                <div class="right-slider__button"></div>
+              </div>
             </div>
           </div>
         </div>
