@@ -531,7 +531,7 @@ NAVBAR
   overflow: hidden;
 }
 
-.nav-bar__img--overlay {
+.navbar__img--overlay {
   position: absolute;
   width: 100%;
   z-index: -10;
@@ -595,7 +595,7 @@ NAVBAR
 }
 
 .fyc-search__input {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 60px;
   border-radius: 50px;
@@ -845,6 +845,10 @@ MEDIA RESPONSIVENESS
   .sun__img {
     left: 350px;
   }
+
+  .navbar__img--overlay {
+    width: 200%;
+  }
 }
 
 /* TABLETS */
@@ -884,6 +888,24 @@ MEDIA RESPONSIVENESS
   }
   .sun__img {
     left: 250px;
+  }
+  .fyc-menu__btn {
+    right: 90px;
+  }
+  .fyc__menu--backdrop {
+    height: 332px;
+  }
+  .search__title {
+    font-size: 42px;
+  }
+  .search__container {
+    width: 80%;
+  }
+  .fyc-search__input {
+    height: 52px;
+  }
+  .fyc-btn__search {
+    height: 52px;
   }
 }
 
@@ -979,6 +1001,13 @@ MEDIA RESPONSIVENESS
     width: 70px;
     left: 175px;
   }
+  .navbar__img--overlay {
+    width: 400%;
+  }
+  .fyc-menu__btn {
+    top: 26px;
+    right: 58px;
+  }
 }
 
 /* SMALL MOBILE PHONES */
@@ -1018,6 +1047,10 @@ MEDIA RESPONSIVENESS
   .menu--open .search__input {
     visibility: hidden;
   }
+  .search__input::placeholder {
+    font-size: 14px;
+    transform: translateY(-2px)
+  }
   .landing__animation--row {
     width: 320px;
     height: 340px;
@@ -1056,5 +1089,10 @@ MEDIA RESPONSIVENESS
   .clouds__img {
     width: 400px;
     top: -60px;
+  }
+  .fyc-menu__btn {
+    top: 26px;
+    right: 58px;
+    scale: 0.8;
   }
 }
