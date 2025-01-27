@@ -1001,12 +1001,27 @@ MEDIA RESPONSIVENESS
     width: 70px;
     left: 175px;
   }
+  .navbar__container{
+    height: 284px;
+  }
   .navbar__img--overlay {
     width: 400%;
   }
   .fyc-menu__btn {
     top: 26px;
     right: 58px;
+  }
+  .search__title {
+    font-size: 32px;
+    margin-top: 0;
+  }
+  .fyc-search__input {
+    width: 88%;
+  }
+  .fyc-btn__search {
+    color: white;
+    padding: 0 0 0 10px;
+    width: 50px;
   }
 }
 
@@ -1022,6 +1037,7 @@ MEDIA RESPONSIVENESS
   .menu__btn {
     right: 50px;
     top: 19px;
+    scale: 0.8;
   }
   .menu__btn--close {
     top: 15px;
@@ -1034,12 +1050,12 @@ MEDIA RESPONSIVENESS
     font-size: 20px;
   }
   .title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
-    margin-top: 0;
+    margin-top: 12px;
   }
   .sub-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 24px;
   }
@@ -1090,9 +1106,16 @@ MEDIA RESPONSIVENESS
     width: 400px;
     top: -60px;
   }
+  .navbar__container{
+    height: 260px;
+  }
   .fyc-menu__btn {
     top: 26px;
     right: 58px;
     scale: 0.8;
+  }
+  .search__title {
+    font-size: 22px;
+    margin-bottom: 16px;
   }
 }
