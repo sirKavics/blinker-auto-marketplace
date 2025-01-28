@@ -656,7 +656,7 @@ SEARCH
 
 .price-filter__container {
   width: 348px;
-  height: 75px;
+  height: 100%;
 }
 
 .price-range {
@@ -722,7 +722,7 @@ SEARCH
 
 .cars__content--wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
@@ -730,11 +730,11 @@ SEARCH
 }
 
 .car__card {
-  max-width: calc(100% / 3.3);
+  max-width: calc(100% / 3.2);
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 10px;
-  margin: 24px 10px;
+  margin-bottom: 24px;
   border: 4px solid #1f96d11d;
   overflow: hidden;
   transition: all 300ms ease;
@@ -752,7 +752,7 @@ SEARCH
 }
 
 .car__img--container {
-  height: 50%;
+  max-height: 50%;
   overflow: hidden;
 }
 
@@ -764,13 +764,13 @@ SEARCH
 }
 
 .car__info {
-  position: absolute;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 50%;
   bottom: 0;
   padding: 24px 32px;
+  font-size: 100%;
 }
 
 .car__name {
@@ -852,6 +852,9 @@ MEDIA RESPONSIVENESS
   .search-info {
     padding-right: 42px;
   }
+  .car__name {
+    /* font-size: 20px; */
+  }
 }
 
 /* TABLETS */
@@ -918,7 +921,7 @@ MEDIA RESPONSIVENESS
     font-size: 18px;
   }
   .car__card {
-    max-width: calc(100% / 3.5);
+    max-width: calc(100% / 3.3);
   }
 }
 
@@ -1065,7 +1068,7 @@ MEDIA RESPONSIVENESS
   .filter__content--wrapper {
     display: flex;
     flex-direction: column;
-    height: 100px;
+    height: 100%;
   }
   .search-info {
     font-size: 22px;
@@ -1080,6 +1083,12 @@ MEDIA RESPONSIVENESS
     font-size: 15px;
     text-align: center;
     margin-bottom: 0;
+  }
+  .car__list--container {
+    padding-top: 14px;
+  }
+  .car__card {
+    max-width: calc(100% / 2.2);
   }
 }
 
@@ -1165,11 +1174,11 @@ MEDIA RESPONSIVENESS
     top: -60px;
   }
   .navbar__container{
-    height: 260px;
-    padding: 0 20px;
+    height: 100%;
+    padding: 0 20px 14px;
   }
   .nav__fyc {
-    padding: 25px 0px;
+    padding: 25px 0px ;
   }
   .fyc-menu__btn {
     top: 26px;
@@ -1192,7 +1201,7 @@ MEDIA RESPONSIVENESS
     width: 100%;
   }
   .search__title {
-    font-size: 18px;
+    font-size: 26px;
     margin-bottom: 16px;
     width: 100%;
   }
@@ -1213,5 +1222,11 @@ MEDIA RESPONSIVENESS
   }
   .price-range {
     font-size: 14px;
+  }
+  .car__list--container {
+    padding-top: 14px;
+  }
+  .car__card {
+    max-width: 90%;
   }
 }
