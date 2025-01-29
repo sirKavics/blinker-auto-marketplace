@@ -720,7 +720,7 @@ SEARCH
   padding: 40px 0 0;
 }
 
-.cars__content--wrapper {
+.car__list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -853,7 +853,7 @@ MEDIA RESPONSIVENESS
     padding-right: 42px;
   }
   .car__name {
-    /* font-size: 20px; */
+    font-size: 20px;
   }
 }
 
@@ -921,7 +921,7 @@ MEDIA RESPONSIVENESS
     font-size: 18px;
   }
   .car__card {
-    max-width: calc(100% / 3.3);
+    max-width: calc(100% / 2.3);
   }
 }
 
@@ -1088,7 +1088,7 @@ MEDIA RESPONSIVENESS
     padding-top: 14px;
   }
   .car__card {
-    max-width: calc(100% / 2.2);
+    max-width: 70%
   }
 }
 
