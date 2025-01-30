@@ -22,34 +22,34 @@ function carHTML(car) {
             <div class="car__card--container">
               <figure class="car__img--container">
                 <img
-                  src="./Assets/acura__test.jpg"
+                  src="${carImage}"
                   class="car__img--wrapper"
                   alt=""
                 />
               </figure>
               <div class="car__info">
-                <p class="car__name light-blue">*Car's Year and Make*</p>
+                <p class="car__name light-blue">${carYearAndMake}</p>
                 <div class="car-specs__container">
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-gauge-high"></i>
                     </figure>
-                    <p class="spec__info light-blue">*Car Milage* km</p>
+                    <p class="spec__info light-blue">${carMilage} km</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-car-side"></i>
                     </figure>
-                    <p class="spec__info light-blue">*Car Type*</p>
+                    <p class="spec__info light-blue">${carType}</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-gears"></i>
                     </figure>
-                    <p class="spec__info light-blue">*Transmission*</p>
+                    <p class="spec__info light-blue">${transmission}</p>
                   </div>
                 </div>
-                <p class="car__price light-blue">$*Price*</p>
+                <p class="car__price light-blue">$${price}</p>
               </div>
             </div>
           </div>`
