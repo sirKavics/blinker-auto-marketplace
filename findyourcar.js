@@ -1,56 +1,57 @@
 function openMenu() {
   document.body.classList += " menu--open";
-};
+}
 
 function closeMenu() {
   document.body.classList.remove("menu--open");
-};
+}
 
-const apiUrl = 'https://api.smartcar.com/v2.0/vehicles/'
+const apiUrl = "https://myfakeapi.com/api/cars";
 
 async function main() {
-const cars = await fetch(apiUrl)
-const carsData = await cars.json();
-const carListEl = document.querySelector('.car__list')
-console.log(fetch(carsData))
-};
+  const response = await fetch(apiUrl);
+  const carsData = await response.json();
+  const carListEl = document.querySelector(".car__list");
+  console.log(carsData);
+  carListEl.innerHTML = carsData.cars.map((auto) => carHTML(auto)).join("");
+}
 
 main();
 
-function carHTML(car) {
+function carHTML(auto) {
   return `<div class="car__card cursor-pointer">
             <div class="car__card--container">
               <figure class="car__img--container">
                 <img
-                  src="${carImage}"
+                  src="./Assets/acura__test.jpg"
                   class="car__img--wrapper"
                   alt=""
                 />
               </figure>
               <div class="car__info">
-                <p class="car__name light-blue">${carYearAndMake}</p>
+                <p class="car__name light-blue">${auto.car_model_year} ${auto.car} ${auto.car_model}</p>
                 <div class="car-specs__container">
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-gauge-high"></i>
                     </figure>
-                    <p class="spec__info light-blue">${carMilage} km</p>
+                    <p class="spec__info light-blue">${auto.milage} km</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-car-side"></i>
                     </figure>
-                    <p class="spec__info light-blue">${carType}</p>
+                    <p class="spec__info light-blue">${auto.car_color}</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
                       <i class="fa-solid fa-gears"></i>
                     </figure>
-                    <p class="spec__info light-blue">${transmission}</p>
+                    <p class="spec__info light-blue">${auto.transmission}</p>
                   </div>
                 </div>
-                <p class="car__price light-blue">$${price}</p>
+                <p class="car__price light-blue">${auto.price}</p>
               </div>
             </div>
           </div>`
-}
+};

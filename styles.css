@@ -216,7 +216,7 @@ nav {
 }
 
 .fyc-menu__btn:hover {
-    color: #ffffff3f;
+  color: #ffffff3f;
 }
 
 .fyc__menu--backdrop {
@@ -226,32 +226,32 @@ nav {
 }
 
 .fyc-menu__btn--close {
-    top: 22px;
-    right: 105px;
+  top: 22px;
+  right: 105px;
 }
 
 .fyc-menu__link {
-    color: white;
-    font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 .fyc-menu__link:hover {
-    color: #25acef;
+  color: #25acef;
 }
 
 .fyc-btn__contact {
-    background-color: #1f96d1;
-    letter-spacing: 2px;
+  background-color: #1f96d1;
+  letter-spacing: 2px;
 }
 
 .fyc-btn__contact:hover {
-    border: none;
-    background-color: #25acef;
-    color: #e0f4fb;
+  border: none;
+  background-color: #25acef;
+  color: #e0f4fb;
 }
 
 .fyc-menu__link:hover {
-    color: #1f96d1;
+  color: #1f96d1;
 }
 
 /* 
@@ -1017,7 +1017,7 @@ MEDIA RESPONSIVENESS
     width: 70px;
     left: 175px;
   }
-  .navbar__container{
+  .navbar__container {
     height: 284px;
   }
   .navbar__img--overlay {
@@ -1031,7 +1031,7 @@ MEDIA RESPONSIVENESS
     height: 100%;
   }
   .fyc-menu__btn--close {
-    top: 22px
+    top: 22px;
   }
   .menu__list {
     padding: 18px 0;
@@ -1088,7 +1088,7 @@ MEDIA RESPONSIVENESS
     padding-top: 14px;
   }
   .car__card {
-    max-width: 70%
+    max-width: 70%;
   }
 }
 
@@ -1132,7 +1132,7 @@ MEDIA RESPONSIVENESS
   }
   .search__input::placeholder {
     font-size: 14px;
-    transform: translateY(-2px)
+    transform: translateY(-2px);
   }
   .landing__animation--row {
     width: 320px;
@@ -1173,12 +1173,12 @@ MEDIA RESPONSIVENESS
     width: 400px;
     top: -60px;
   }
-  .navbar__container{
+  .navbar__container {
     height: 100%;
     padding: 0 20px 14px;
   }
   .nav__fyc {
-    padding: 25px 0px ;
+    padding: 25px 0px;
   }
   .fyc-menu__btn {
     top: 26px;
