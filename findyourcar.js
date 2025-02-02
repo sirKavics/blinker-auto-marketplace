@@ -55,3 +55,12 @@ function carHTML(auto) {
             </div>
           </div>`
 };
+
+function searchInfoHTML(info) {
+  return `<div class="search-info__container">
+          <h1 class="search-info">
+            Search results for
+            <span class="bright-blue">"${info.search}"</span>
+          </h1>
+        </div>`
+}
