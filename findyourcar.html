@@ -99,14 +99,16 @@
       <div class="search__container">
         <h1 class="search__title">Browse our cars</h1>
         <div class="search__input--container fyc-search__input--container">
-          <input
+          <form id="search__bar" onsubmit="search(event)">
+            <input
             class="search__input fyc-search__input"
             type="text"
             placeholder="Search by Make, Model or Keyword"
-          />
-          <button class="btn__search fyc-btn__search">
-            <i class="fas fa-search"></i>
-          </button>
+            />
+            <button class="btn__search fyc-btn__search">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </div>
       </div>
     </div>

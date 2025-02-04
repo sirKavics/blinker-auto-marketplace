@@ -8,7 +8,12 @@ function closeMenu() {
 
 const apiUrl = "https://myfakeapi.com/api/cars";
 
-async function main() {
+function search(event) {
+  event.preventDefault();
+  event.target;
+}
+
+async function renderCars() {
   const response = await fetch(apiUrl);
   const carsData = await response.json();
   const carListEl = document.querySelector(".car__list");
@@ -16,7 +21,7 @@ async function main() {
   carListEl.innerHTML = carsData.cars.map((auto) => carHTML(auto)).join("");
 }
 
-main();
+renderCars();
 
 function carHTML(auto) {
   return `<div class="car__card cursor-pointer">
@@ -35,7 +40,7 @@ function carHTML(auto) {
                     <figure class="spec__img">
                       <i class="fa-solid fa-gauge-high"></i>
                     </figure>
-                    <p class="spec__info light-blue">${auto.milage} km</p>
+                    <p class="spec__info light-blue">${auto.milage ?? "N/A"} km</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
@@ -47,20 +52,20 @@ function carHTML(auto) {
                     <figure class="spec__img">
                       <i class="fa-solid fa-gears"></i>
                     </figure>
-                    <p class="spec__info light-blue">${auto.transmission}</p>
+                    <p class="spec__info light-blue">${auto.transmission ?? "N/A"}</p>
                   </div>
                 </div>
-                <p class="car__price light-blue">${auto.price}</p>
+                <p class="car__price light-blue">${auto.price ?? "Contact for price"}</p>
               </div>
             </div>
           </div>`
 };
 
-function searchInfoHTML(info) {
+function searchInfoHTML(input) {
   return `<div class="search-info__container">
           <h1 class="search-info">
             Search results for
-            <span class="bright-blue">"${info.search}"</span>
+            <span class="bright-blue">"${input}"</span>
           </h1>
         </div>`
-}
+};
