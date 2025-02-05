@@ -8,20 +8,22 @@ function closeMenu() {
 
 const apiUrl = "https://myfakeapi.com/api/cars";
 
-function search(event) {
-  event.preventDefault();
-  event.target;
-}
+// function search(event) {
+  //   event.preventDefault();
+  //   event.target;
+  // }
 
-async function renderCars() {
-  const response = await fetch(apiUrl);
-  const carsData = await response.json();
-  const carListEl = document.querySelector(".car__list");
-  console.log(carsData);
-  carListEl.innerHTML = carsData.cars.map((auto) => carHTML(auto)).join("");
-}
-
-renderCars();
+  
+  async function renderCars() {
+    const carSearchEl = document.querySelector(".search__input").value
+    const carListEl = document.querySelector(".car__list");
+    const response = await fetch(`https://myfakeapi.com/api/cars`)
+    const carsData = await response.json();
+    console.log(carsData)
+    carListEl.innerHTML = carsData.cars.map((auto) => carHTML(auto)).join("");
+  }
+  
+  renderCars();
 
 function carHTML(auto) {
   return `<div class="car__card cursor-pointer">
@@ -34,7 +36,7 @@ function carHTML(auto) {
                 />
               </figure>
               <div class="car__info">
-                <p class="car__name light-blue">${auto.car_model_year} ${auto.car} ${auto.car_model}</p>
+                <p class="car__name light-blue">${auto.car_model_year} ${auto.car} <br> ${auto.car_model}</p>
                 <div class="car-specs__container">
                   <div class="car__spec">
                     <figure class="spec__img">

@@ -8,7 +8,7 @@
       blinker | Car Subscription Platform for Dealerships | blinker.com.pt
     </title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="findyourcar.js" defer></script>
+    <script src="./findyourcar.js" defer></script>
     <script
       src="https://kit.fontawesome.com/30b5de38f9.js"
       crossorigin="anonymous"
@@ -35,14 +35,14 @@
           <ul class="nav__link--list">
             <li class="nav__link nav__link--white">
               <a
-                href="#"
+                href="./index.html"
                 class="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
                 >Home</a
               >
             </li>
             <li class="nav__link">
               <a
-                href="#"
+                href="./findyourcar.html"
                 class="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
                 >Find your car</a
               >
@@ -50,7 +50,7 @@
             <li class="nav__link">
               <a
                 href="#"
-                class="nav__link--anchor btn__contact fyc-btn__contact"
+                class="nav__link--anchor btn__contact fyc-btn__contact no-cursor"
                 >CONTACT</a
               >
             </li>
@@ -73,14 +73,14 @@
             <ul class="menu__links">
               <li class="menu__list">
                 <a
-                  href="index.html"
+                  href="./index.html"
                   class="menu__link fyc-menu__link link__hover-effect"
                   >Home</a
                 >
               </li>
               <li class="menu__list">
                 <a
-                  href="findyourcar.html"
+                  href="./findyourcar.html"
                   class="menu__link fyc-menu__link link__hover-effect"
                   >Find your car</a
                 >
@@ -99,13 +99,13 @@
       <div class="search__container">
         <h1 class="search__title">Browse our cars</h1>
         <div class="search__input--container fyc-search__input--container">
-          <form id="search__bar" onsubmit="search(event)">
+          <form id="search__bar" onsubmit="renderCars()">
             <input
             class="search__input fyc-search__input"
             type="text"
             placeholder="Search by Make, Model or Keyword"
             />
-            <button class="btn__search fyc-btn__search">
+            <button class="btn__search fyc-btn__search" onclick="renderCars()">
               <i class="fas fa-search"></i>
             </button>
           </form>
