@@ -1041,8 +1041,12 @@ MEDIA RESPONSIVENESS
     margin-top: 0;
     margin-bottom: 16px;
   }
+  form {
+    width: 100%;
+  }
   .fyc-search__input--container {
     height: 105px;
+    width: 100%;
     display: flex;
   }
   .fyc-search__input {
