@@ -6,7 +6,48 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
+async function renderCars() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchButton = document.querySelector(".btn__search");
+    const searchInput = document.querySelector(".search__input");
+    const carList = document.querySelector(".car__list");
 
+    if (!searchInput || !searchButton || !carList) {
+      console.log("Required DOM elements not found.");
+      return;
+    }
+
+    searchButton.addEventListener("click", async () => {
+      try {
+        const carName = searchInput.value.trim();
+        if (!carName) {
+          carList.innerHTML = "<p>Ple3el to search.</p>";
+          return;
+        }
+        const response = await fetch(`https://myfakeapi.com/api/cars/name/${carName}`);
+
+        if(!response.ok)
+          throw new Error(`HTTP error! status: ${response.status}`);
+
+        const carsData = await response.json();
+        console.log("Fetched cars data:", carsData);
+
+        if (carsData.Cars && carsData.Cars.length > 0) {
+          carList.innerHTML = carsData.Cars.map((car) => carCardHTML(car)).join("");
+        }
+        else {
+          carList.innerHTML = "<p>No cars found.</p>";
+        }
+      }
+      catch (error) {
+        console.error("Error fetching car data:", error);
+        carList.innerHTML = "<p>Error fetching car data: Data not available.</p>";
+      }
+    });
+  });
+}
+
+renderCars();
 
 function carCardHTML(car) {
   return `<div class="car__card cursor-pointer">
