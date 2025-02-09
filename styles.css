@@ -40,6 +40,12 @@ a {
   cursor: pointer;
 }
 
+p {
+  color: #1f96d1;
+  font-size: 20px;
+  font-weight: 500
+}
+
 /*
 
 NAVIGATION
