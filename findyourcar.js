@@ -7,55 +7,60 @@ function closeMenu() {
 }
 
 async function renderCars() {
-    const searchButton = document.querySelector(".btn__search");
-    const searchInput = document.querySelector(".search__input");
-    const searchForm = document.getElementById("search__bar");
-    const searchInfo = document.getElementById(".search__info")
-    const carList = document.querySelector(".car__list");
+  const searchButton = document.querySelector(".btn__search");
+  const searchInput = document.querySelector(".search__input");
+  const searchForm = document.getElementById("search__bar");
+  const searchInfo = document.getElementById("search__info");
+  const carList = document.querySelector(".car__list");
 
-    if (!searchInput || !searchButton || !carList || !searchForm) {
-      console.log("Required DOM elements not found.");
-      return;
-    }
+  if (!searchInput || !searchButton || !carList || !searchForm) {
+    console.log("Required DOM elements not found.");
+    return;
+  }
 
-    // searchForm.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    // });
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
 
-    searchButton.addEventListener("click", async (e) => {
-      e.preventDefault();
-      try {
-        let carName = searchInput.value.trim();
-        // searchInfo.innerHTML = searchInput.map((input) => searchInputHTML(input)).join("");
+  searchButton.addEventListener("click", async (e) => {
+    e.preventDefault();
+    try {
+      let carName = searchInput.value.trim();
+      
+      if (!carName) {
+        carList.innerHTML = "<p>Please enter car brand to search.</p>";
+        carList.style.display = "block"
+        return;
+      };
 
-        if (!carName) {
-          carList.innerHTML = "<p>Please enter car brand to search.</p>";
-          return;
-        }
+      searchInfo.innerHTML = searchInputHTML(carName);
 
-        carName = carName.charAt(0).toUpperCase() + carName.slice(1);
-        carList.innerHTML = "<p>Loading...</p>";
-        const response = await fetch(`https://myfakeapi.com/api/cars/name/${carName}`);
-
-        if(!response.ok)
+      carName = carName.charAt(0).toUpperCase() + carName.slice(1);
+      carList.innerHTML = "<p>Loading...</p>";
+      
+      const response = await fetch(
+        `https://myfakeapi.com/api/cars/name/${carName}`);
+        
+        if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
-
+        
         const carsData = await response.json();
         console.log("Fetched cars data:", carsData);
-
-        if (carsData.Cars && Array.isArray(carsData.Cars) && carsData.Cars.length > 0) {
-          carList.innerHTML = carsData.Cars.map((car) => carCardHTML(car)).join("");
-        }
-
-        else {
-          carList.innerHTML = "<p>No cars found.</p>";
-        }
+        
+        if (
+          carsData.Cars &&
+          Array.isArray(carsData.Cars) &&
+          carsData.Cars.length > 0
+        ) {
+        carList.innerHTML = carsData.Cars.map((car) => carCardHTML(car)).join("");
+      } else {
+        carList.innerHTML = "<p>No cars found.</p>";
       }
-      catch (error) {
-        console.error("Error fetching car data:", error);
-        carList.innerHTML = "<p>Error fetching car data: Data not available.</p>";
-      }
-    });
+    } catch (error) {
+      console.error("Error fetching car data:", error);
+      carList.innerHTML = "<p>Error fetching car data: Data not available.</p>";
+    }
+  });
 }
 
 renderCars();
@@ -77,7 +82,9 @@ function carCardHTML(car) {
                     <figure class="spec__img">
                       <i class="fa-solid fa-gauge-high"></i>
                     </figure>
-                    <p class="spec__info light-blue">${car.milage ?? "N/A"} km</p>
+                    <p class="spec__info light-blue">${
+                      car.milage ?? "N/A"
+                    } km</p>
                   </div>
                   <div class="car__spec">
                     <figure class="spec__img">
@@ -89,21 +96,23 @@ function carCardHTML(car) {
                     <figure class="spec__img">
                       <i class="fa-solid fa-gears"></i>
                     </figure>
-                    <p class="spec__info light-blue">${car.transmission ?? "N/A"}</p>
+                    <p class="spec__info light-blue">${
+                      car.transmission ?? "N/A"
+                    }</p>
                   </div>
                 </div>
-                <p class="car__price light-blue">${car.price ?? "Contact for price"}</p>
+                <p class="car__price light-blue">${
+                  car.price ?? "Contact for price"
+                }</p>
               </div>
             </div>
           </div>`;
 }
 
-function searchInputHTML(input) {
+function searchInputHTML(carName) {
   return `<h1 class="search-info">
-            Search results for
-            <span class="bright-blue">"${input}"</span>
+            Search results for: <br>
+            <span class="bright-blue">"${carName}"</span>
           </h1>
         </div>`;
 }
-
-

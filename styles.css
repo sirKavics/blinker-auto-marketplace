@@ -645,11 +645,10 @@ SEARCH
 
 .filter__content--wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 0 20px;
   max-width: 1200px;
+  width: 100%;
   height: 75px;
 }
 
@@ -657,7 +656,6 @@ SEARCH
   font-size: 28px;
   color: #135677;
   letter-spacing: 1px;
-  text-transform: capitalize;
 }
 
 .price-filter__container {
@@ -696,7 +694,6 @@ SEARCH
   transform: translateX(-50%);
   width: 32px;
   height: 32px;
-  /* background-color: #ffbf73; */
 }
 
 .left-slider__button {
