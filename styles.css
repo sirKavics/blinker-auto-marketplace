@@ -597,7 +597,6 @@ NAVBAR
 
 .search__input--container {
   position: relative;
-  height: 60px;
 }
 
 .fyc-search__input {
@@ -605,6 +604,7 @@ NAVBAR
   width: 100%;
   height: 60px;
   border-radius: 50px;
+  padding: 0 32px;
 }
 
 .fyc-btn__search {
@@ -612,10 +612,11 @@ NAVBAR
   color: #1b78a6;
   background-color: transparent;
   padding: 0 20px 0 8px;
-  margin: 0;
   width: 60px;
   height: 60px;
   right: 0;
+  margin: 0;
+  margin-right: 14px;
 }
 
 .fyc-btn__search:hover {
@@ -678,7 +679,7 @@ SEARCH
   background-color: #1f96d13d;
 }
 
-.slider__bar {
+.slider__track {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -696,7 +697,7 @@ SEARCH
   height: 32px;
 }
 
-.left-slider__button {
+.min-slider__button {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -706,7 +707,7 @@ SEARCH
   z-index: 100;
 }
 
-.right-slider__button {
+.max-slider__button {
   width: 20px;
   height: 20px;
   position: absolute;

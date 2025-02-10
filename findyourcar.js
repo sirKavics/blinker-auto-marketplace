@@ -18,6 +18,9 @@ async function renderCars() {
     return;
   }
 
+  carList.style.display = "none";
+  searchInfo.innerHTML = "";
+
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
   });
@@ -29,10 +32,11 @@ async function renderCars() {
       
       if (!carName) {
         carList.innerHTML = "<p>Please enter car brand to search.</p>";
-        carList.style.display = "block"
+        carList.style.display = "";
         return;
       };
 
+      carList.style.removeProperty("display");
       searchInfo.innerHTML = searchInputHTML(carName);
 
       carName = carName.charAt(0).toUpperCase() + carName.slice(1);
