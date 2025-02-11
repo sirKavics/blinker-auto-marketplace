@@ -604,7 +604,7 @@ NAVBAR
   width: 100%;
   height: 60px;
   border-radius: 50px;
-  padding: 0 32px;
+  padding: 0 32px 0 42px;
 }
 
 .fyc-btn__search {
@@ -924,6 +924,10 @@ MEDIA RESPONSIVENESS
   .price-range {
     font-size: 18px;
   }
+  .price-filter__container {
+    width: 40%;
+    margin: 0 auto;
+  }
   .car__card {
     max-width: calc(100% / 2.3);
   }
@@ -1056,6 +1060,8 @@ MEDIA RESPONSIVENESS
   .fyc-search__input {
     width: 100%;
     height: 46px;
+    padding: 0 32px;
+    text-align: center;
   }
   .fyc-search__input::placeholder {
     text-align: center;
