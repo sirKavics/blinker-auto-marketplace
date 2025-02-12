@@ -6,6 +6,21 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
+let selectedSearchType = "name";
+
+function selectOption(index) {
+  const options = document.querySelectorAll(".toggle__option");
+  const slider = document.querySelector(".toggle__slider");
+  const searchTypes = ["name","model","year"];
+  selectedSearchType = searchTypes[index] || "name";
+
+  slider.style.transform = `translateX(${index * 100}%)`;
+  options.forEach(option => option.classList.remove("toggle__active"));
+  options[index].classList.add("toggle__active");
+
+  console.log(`Search type changed to: ${selectedSearchType}`)
+}
+
 async function renderCars() {
   const searchButton = document.querySelector(".btn__search");
   const searchInput = document.querySelector(".search__input");
@@ -21,29 +36,29 @@ async function renderCars() {
   carList.style.display = "none";
   searchInfo.innerHTML = "";
 
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
   });
 
-  searchButton.addEventListener("click", async (e) => {
-    e.preventDefault();
+  searchButton.addEventListener("click", async (event) => {
+    event.preventDefault();
     try {
-      let carName = searchInput.value.trim();
+      let searchValue = searchInput.value.trim();
       
-      if (!carName) {
-        carList.innerHTML = "<p>Please enter car brand to search.</p>";
+      if (!searchValue) {
+        carList.innerHTML = `<p>Please enter car ${selectedSearchType} to search.</p>`;
         carList.style.display = "";
         return;
       };
 
       carList.style.removeProperty("display");
-      searchInfo.innerHTML = searchInputHTML(carName);
+      searchInfo.innerHTML = searchInputHTML(searchValue);
 
-      carName = carName.charAt(0).toUpperCase() + carName.slice(1);
+      searchValue = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
       carList.innerHTML = "<p>Loading...</p>";
       
       const response = await fetch(
-        `https://myfakeapi.com/api/cars/name/${carName}`);
+        `https://myfakeapi.com/api/cars/${selectedSearchType}/${searchValue}`);
         
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);

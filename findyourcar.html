@@ -101,13 +101,21 @@
         <div class="search__input--container fyc-search__input--container">
           <form id="search__bar" onsubmit="renderCars()">
             <input
-            class="search__input fyc-search__input"
-            type="text"
-            placeholder="Search your car here"
+              class="search__input fyc-search__input"
+              type="text"
+              placeholder="Search your car here"
             />
             <button class="btn__search fyc-btn__search" onclick="renderCars()">
               <i class="fas fa-search"></i>
             </button>
+            <div class="search__toggle--container">
+              <div class="search__toggle--bar">
+                <div class="toggle__slider"></div>
+                <button class="toggle__option toggle__active" onclick="selectOption(0)">Brand</button>
+                <button class="toggle__option" onclick="selectOption(1)">Model</button>
+                <button class="toggle__option" onclick="selectOption(2)">Year</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -117,13 +125,14 @@
       <div id="filter" class="filter__content--wrapper">
         <div id="search__info" class="search-info__container">
           <h1 class="search-info">
-            Search results for: <br>
+            Search results for: <br />
             <span class="bright-blue">"make, model or keyword"</span>
           </h1>
         </div>
         <div class="price-filter__container">
           <h2 class="price-range">
-            <span class="blue">Price range:</span><br> $0 to $100,000
+            <span class="blue">Price range:</span><br />
+            $0 to $100,000
           </h2>
           <div class="slider">
             <div class="slider__runway--container">
