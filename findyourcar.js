@@ -82,7 +82,12 @@ async function renderCars() {
   });
 }
 
-renderCars();
+function priceRange(price) {
+  return `<h2 class="price-range">
+              <span class="blue">Price range:</span><br />
+              $${minPrice} to $${maxPrice}
+            </h2>`
+}
 
 function carCardHTML(car) {
   return `<div class="car__card cursor-pointer">
@@ -128,10 +133,12 @@ function carCardHTML(car) {
           </div>`;
 }
 
-function searchInputHTML(carName) {
+function searchInputHTML(searchValue) {
   return `<h1 class="search-info">
             Search results for: <br>
-            <span class="bright-blue">"${carName}"</span>
+            <span class="bright-blue">"${searchValue}"</span>
           </h1>
         </div>`;
 }
+
+renderCars();
