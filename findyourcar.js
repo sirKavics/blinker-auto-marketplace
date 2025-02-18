@@ -6,6 +6,35 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
+// PRICE FILTER
+const minButton = document.querySelector(".min-slider__button");
+const maxButton = document.querySelector(".max-slider__button");
+const sliderTrack = document.querySelector(".slider__track");
+
+let minValue = 0;
+let maxValue = 100000;
+let currentMin = minValue;
+let currentmax = maxValue;
+
+const updatePriceRange = () => {
+  priceRangeText.innerHTML = `<span class="blue">Price range:</span><br />
+              $${currentMin.toLocaleString()} to $${currentmax.toLocaleString()}`;
+};
+
+const setButtonPosition = (button, percent) => {
+  button.style.left = `${percent}%`;
+};
+
+const handleDrag = (button, isMin) => {
+  let startX = 0;
+
+  const onMouseMove = (e) => {
+    const sliderRect = sliderTrack.parentElement.getBoundingClientRect();
+    const sliderWidth = sliderRect.width;
+  }
+}
+
+// SEARCH AND RENDER CARS
 let selectedSearchType = "name";
 
 function selectOption(index) {
@@ -80,13 +109,6 @@ async function renderCars() {
       carList.innerHTML = "<p>Error fetching car data: Data not available.</p>";
     }
   });
-}
-
-function priceRange(price) {
-  return `<h2 class="price-range">
-              <span class="blue">Price range:</span><br />
-              $${minPrice} to $${maxPrice}
-            </h2>`
 }
 
 function carCardHTML(car) {
