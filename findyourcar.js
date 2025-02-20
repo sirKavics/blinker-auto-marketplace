@@ -7,34 +7,23 @@ function closeMenu() {
 }
 
 // PRICE FILTER
-const minButton = document.querySelector(".min-slider__button");
-const maxButton = document.querySelector(".max-slider__button");
-const sliderTrack = document.querySelector(".slider__track");
 
-let minValue = 0;
-let maxValue = 100000;
-let currentMin = minValue;
-let currentmax = maxValue;
-
-const updatePriceRange = () => {
-  priceRangeText.innerHTML = `<span class="blue">Price range:</span><br />
-              $${currentMin.toLocaleString()} to $${currentmax.toLocaleString()}`;
-};
-
-const setButtonPosition = (button, percent) => {
-  button.style.left = `${percent}%`;
-};
-
-const handleDrag = (button, isMin) => {
-  let startX = 0;
-
-  const onMouseMove = (e) => {
-    const sliderRect = sliderTrack.parentElement.getBoundingClientRect();
-    const sliderWidth = sliderRect.width;
-  }
-}
 
 // SEARCH AND RENDER CARS
+let selectedSearchType = "name";
+
+function selectOption(index) {
+  const options = document.querySelectorAll(".toggle__option");
+  const slider = document.querySelector(".toggle__slider");
+  const searchTypes = ["name","model","year"];
+  selectedSearchType = searchTypes[index] || "name";
+
+  slider.style.transform = `translateX(${index * 100}%)`;
+  options.forEach(option => option.classList.remove("toggle__active"));
+  options[index].classList.add("toggle__active");
+
+  console.log(`Search type changed to: ${selectedSearchType}`)
+}
 
 async function renderCars() {
   const searchButton = document.querySelector(".btn__search");
@@ -102,7 +91,7 @@ function carCardHTML(car) {
             <div class="car__card--container">
               <figure class="car__img--container">
                 <img
-                  src="./Assets/acura__test.jpg"
+                  src="./Assets/image not available template.png"
                   class="car__img--wrapper"
                   alt=""
                 />
