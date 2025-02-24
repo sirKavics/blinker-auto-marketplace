@@ -705,6 +705,7 @@ SEARCH INFO
   width: 100%;
   height: 75px;
   margin: 0 auto;
+  padding: 0 48px;
 }
 
 .search-info {
@@ -714,64 +715,29 @@ SEARCH INFO
 }
 
 .price-filter__container {
-  width: 348px;
+  width: 268px;
   height: 100%;
 }
 
-.price-range {
+.price-title {
   font-size: 20px;
   letter-spacing: 1px;
-  margin-bottom: 12px;
+  margin: 0 0 12px 20px;
   color: #1f96d1;
 }
 
-.slider__runway--container {
-  position: relative;
+.price__options--container {
   width: 100%;
-  height: 6px;
-  margin: 22px 0;
-  background-color: #1f96d13d;
 }
 
-.slider__track {
-  position: absolute;
+.price__options {
   width: 100%;
-  height: 100%;
-  background-color: #1f96d1;
-}
-
-.slider__button--wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -13px;
-  transform: translateX(-50%);
-  width: 32px;
-  height: 32px;
-}
-
-.min-slider__button {
-  width: 20px;
-  height: 20px;
-  position: absolute;
+  height: 40px;
+  border: 0px solid #1b78a6;
   border-radius: 50px;
-  border: 6px solid #1f96d1;
-  background-color: white;
-  z-index: 100;
-}
-
-.max-slider__button {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border-radius: 50px;
-  border: 6px solid #1f96d1;
-  background-color: white;
-}
-
-.right-slider {
-  left: 100%;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: #1f96d1;
 }
 
 .car__list--container {
@@ -975,12 +941,11 @@ MEDIA RESPONSIVENESS
     font-size: 22px;
     padding-right: 42px;
   }
-  .price-range {
+  .price-title {
     font-size: 18px;
   }
   .price-filter__container {
-    width: 40%;
-    margin: 0 auto;
+    width: 268px;
   }
   .car__card {
     max-width: calc(100% / 2.3);
@@ -1147,7 +1112,7 @@ MEDIA RESPONSIVENESS
   .price-filter__container {
     width: 90%;
   }
-  .price-range {
+  .price-title {
     font-size: 15px;
     text-align: center;
     margin-bottom: 0;
@@ -1288,7 +1253,7 @@ MEDIA RESPONSIVENESS
   .search-info {
     font-size: 16px;
   }
-  .price-range {
+  .price-title {
     font-size: 14px;
   }
   .car__list--container {
