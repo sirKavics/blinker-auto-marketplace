@@ -31,6 +31,7 @@ async function renderCars() {
   const searchForm = document.getElementById("search__bar");
   const searchInfo = document.getElementById("search__info");
   const carList = document.querySelector(".car__list");
+  const priceFilter = document.getElementById("price");
 
   if (!searchInput || !searchButton || !carList || !searchForm) {
     console.log("Required DOM elements not found.");
@@ -57,7 +58,6 @@ async function renderCars() {
 
       carList.style.removeProperty("display");
       searchInfo.innerHTML = searchInputHTML(searchValue);
-
       searchValue = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
       carList.innerHTML = "<p>Loading...</p>";
       
@@ -70,12 +70,21 @@ async function renderCars() {
         const carsData = await response.json();
         console.log("Fetched cars data:", carsData);
         
-        if (
-          carsData.Cars &&
-          Array.isArray(carsData.Cars) &&
-          carsData.Cars.length > 0
-        ) {
-        carList.innerHTML = carsData.Cars.map((car) => carCardHTML(car)).join("");
+        if (carsData.Cars && Array.isArray(carsData.Cars) && carsData.Cars.length > 0) {
+          const selectedPriceRange = priceFilter.value;
+          let minPrice = 0, maxPrice = Infinity;
+
+          if (selectedPriceRange) {
+            [minPrice, maxPrice] = selectedPriceRange.split("-").map(Number);
+          }
+
+          const filteredCars = carsData.Cars.filter((car) => {
+            const carPrice = parseInt(car.price.replace(/\D/g, ''), 10) || 0;
+            return carPrice >= minPrice && carPrice <= maxPrice;
+          });
+          
+          carList.innerHTML = filteredCars.length > 0 ? filteredCars.map((car) => carCardHTML(car)).join("")
+          : "<p>No cars found in this price range</p>";
       } else {
         carList.innerHTML = "<p>No cars found.</p>";
       }
