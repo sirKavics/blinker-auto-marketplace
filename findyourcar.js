@@ -6,9 +6,6 @@ function closeMenu() {
   document.body.classList.remove("menu--open");
 }
 
-// PRICE FILTER
-
-
 // SEARCH AND RENDER CARS
 let selectedSearchType = "name";
 
@@ -41,12 +38,22 @@ async function renderCars() {
   carList.style.display = "none";
   searchInfo.innerHTML = "";
 
-  searchForm.addEventListener("submit", (event) => {
+  searchForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
   });
-
+  
   searchButton.addEventListener("click", async (event) => {
     event.preventDefault();
+    await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
+  });
+
+  priceFilter.addEventListener("change", async () => {
+    await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
+  });
+}
+
+  async function fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter) {
     try {
       let searchValue = searchInput.value.trim();
       
@@ -71,15 +78,25 @@ async function renderCars() {
         console.log("Fetched cars data:", carsData);
         
         if (carsData.Cars && Array.isArray(carsData.Cars) && carsData.Cars.length > 0) {
-          const selectedPriceRange = priceFilter.value;
+          const selectedPriceRange = priceFilter.value.trim();
           let minPrice = 0, maxPrice = Infinity;
 
-          if (selectedPriceRange) {
-            [minPrice, maxPrice] = selectedPriceRange.split("-").map(Number);
+          if (selectedPriceRange.includes("-")) {
+            const priceRange = selectedPriceRange.split("-").map(Number);
+            minPrice = Number(priceRange[0]) || 0;
+            maxPrice = Number(priceRange[1]) || Infinity;
           }
 
+          console.log(`Filtering between: $${minPrice} - $${maxPrice}`);
+
           const filteredCars = carsData.Cars.filter((car) => {
-            const carPrice = parseInt(car.price.replace(/\D/g, ''), 10) || 0;
+            let carPrice = car.price.match(/\d+/g, "");
+            carPrice = carPrice ? parseInt(carPrice.join(""), 10) : 0;
+
+            carPrice = Math.round(carPrice / 100);
+
+            console.log(`Car: ${car.car_model}, Price: ${carPrice}`);
+
             return carPrice >= minPrice && carPrice <= maxPrice;
           });
           
@@ -92,8 +109,7 @@ async function renderCars() {
       console.error("Error fetching car data:", error);
       carList.innerHTML = "<p>Error fetching car data: Data not available.</p>";
     }
-  });
-}
+  }
 
 function carCardHTML(car) {
   return `<div class="car__card cursor-pointer">
