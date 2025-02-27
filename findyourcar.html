@@ -9,6 +9,7 @@
     </title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./findyourcar.js" defer></script>
+    <script src="./search.js" defer></script>
     <script
       src="https://kit.fontawesome.com/30b5de38f9.js"
       crossorigin="anonymous"
@@ -105,9 +106,6 @@
               type="text"
               placeholder="Search your car here"
             />
-            <button class="btn__search fyc-btn__search" onclick="renderCars()">
-              <i class="fas fa-search"></i>
-            </button>
             <div class="search__toggle--container">
               <div class="search__toggle--bar">
                 <div class="toggle__slider"></div>
@@ -115,6 +113,11 @@
                 <button class="toggle__option" onclick="selectOption(1)">Model</button>
                 <button class="toggle__option" onclick="selectOption(2)">Year</button>
               </div>
+            </div>
+            <div class="fyc-btn__search--container">
+              <button class="btn__search fyc-btn__search" onclick="renderCars()">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -130,11 +133,9 @@
           </h1>
         </div>
         <div class="price-filter__container">
-          <div class="price-range--container">
             <h2 class="price-title">
               <span class="blue">Filter by price:</span>
             </h2>
-          </div>
           <form class="price__options--container">
             <select name="price__options" id="price" class="price__options">
               <option value="">Select your option...</option>

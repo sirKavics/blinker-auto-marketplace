@@ -330,6 +330,7 @@ header {
   border: none;
   border-radius: 20px;
   font-size: 24px;
+  color: #1f96d1;
 }
 
 .search__input::placeholder {
@@ -722,7 +723,8 @@ SEARCH INFO
 .price-title {
   font-size: 20px;
   letter-spacing: 1px;
-  margin: 0 0 12px 20px;
+  margin: 0 0 12px;
+  text-align: end;
   color: #1f96d1;
 }
 
@@ -939,13 +941,25 @@ MEDIA RESPONSIVENESS
   }
   .search-info {
     font-size: 22px;
-    padding-right: 42px;
+    padding-right: 10px;
   }
   .price-title {
     font-size: 18px;
+    margin-bottom: 8px;
   }
   .price-filter__container {
-    width: 268px;
+    width: 194px;
+    display: flex;
+    flex-direction: column;
+    align-items: end; 
+  }
+  .price__options--container {
+    width: 194px;
+  }
+  .price__options {
+    height: 36px;
+    width: 194px;
+    font-size: 14px;
   }
   .car__card {
     max-width: calc(100% / 2.3);
@@ -1045,7 +1059,8 @@ MEDIA RESPONSIVENESS
     left: 175px;
   }
   .navbar__container {
-    height: 284px;
+    height: 100%;
+    padding: 0 15px 24px;
   }
   .navbar__img--overlay {
     width: 400%;
@@ -1063,6 +1078,9 @@ MEDIA RESPONSIVENESS
   .menu__list {
     padding: 18px 0;
   }
+  #search {
+    padding: 30px 20px;
+  }
   .search__title {
     font-size: 32px;
     margin-top: 0;
@@ -1072,27 +1090,46 @@ MEDIA RESPONSIVENESS
     width: 100%;
   }
   .fyc-search__input--container {
-    height: 105px;
+    height: 100%;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .fyc-search__input {
     width: 100%;
-    height: 46px;
+    height: 40px;
     padding: 0 32px;
+    margin-bottom: 12px;
     text-align: center;
   }
   .fyc-search__input::placeholder {
+    font-size: 20px;
     text-align: center;
   }
+  .search__toggle--container {
+    margin-bottom: 20px;
+    margin-top: 0px
+  }
+  .search__toggle--bar {
+    width: 280px;
+    height: 24px;
+    padding: 0 12px;
+  }
+  .fyc-btn__search--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .fyc-btn__search {
-    padding: 0;
-    width: 80px;
+    position: static;
+    padding: 0 16px;
+    width: 50%;
     color: white;
     background-color: #1f96d1;
-    bottom: 0;
-    width: 100%;
+    width: 50%;
     height: 46px;
+    margin: 0 auto;
   }
   .fyc-btn__search:hover {
     color: white;
@@ -1110,12 +1147,14 @@ MEDIA RESPONSIVENESS
     text-align: center;
   }
   .price-filter__container {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
   .price-title {
     font-size: 15px;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 8px;
   }
   .car__list--container {
     padding-top: 14px;
@@ -1239,10 +1278,13 @@ MEDIA RESPONSIVENESS
     width: 100%;
   }
   .fyc-search__input--container {
-    height: 97px;
+    height: 100%;
   }
   .fyc-search__input {
     height: 42px;
+  }
+  .fyc-search__input::placeholder {
+    font-size: 18px;
   }
   .fyc-btn__search {
     height: 42px;
@@ -1251,7 +1293,7 @@ MEDIA RESPONSIVENESS
     padding: 0;
   }
   .search-info {
-    font-size: 16px;
+    font-size: 18px;
   }
   .price-title {
     font-size: 14px;
