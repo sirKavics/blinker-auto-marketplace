@@ -1286,6 +1286,12 @@ MEDIA RESPONSIVENESS
   .fyc-search__input::placeholder {
     font-size: 18px;
   }
+  .search__toggle--bar {
+    width: 100%;
+  }
+  .toggle__slider {
+    width: calc(100% / 3);
+  }
   .fyc-btn__search {
     height: 42px;
   }
