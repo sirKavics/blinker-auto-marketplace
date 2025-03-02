@@ -1,11 +1,3 @@
-function openMenu() {
-    document.body.classList += " menu--open";
-  }
-  
-  function closeMenu() {
-    document.body.classList.remove("menu--open");
-  }
-
 let selectedSearchType = "name";
 
 function selectOption(index) {
@@ -14,15 +6,12 @@ function selectOption(index) {
   const searchTypes = ["name","model","year"];
 
   selectedSearchType = searchTypes[index] || "name";
-  localStorage.setItem("searchType", selectedSearchType);
 
   slider.style.transform = `translateX(${index * 100}%)`;
-  options.forEach(option => option.classList.remove("toggle__active"));
+  options.forEach((option) => option.classList.remove("toggle__active"));
   options[index].classList.add("toggle__active");
 
   console.log(`Search type changed to: ${selectedSearchType}`)
-  
-  const searchInput = document.querySelector(".search__input");
 }
 
 async function renderCars() {
@@ -40,19 +29,26 @@ async function renderCars() {
 
   carList.style.display = "none";
   searchInfo.innerHTML = "";
+  
+  if (!searchForm.dataset.bound) {
+    searchForm.dataset.bound = true;
 
-  searchForm.removeEventListener("submit", handleSearch);
-  searchButton.removeEventListener("click", handleSearch);
-  priceFilter.removeEventListener("change", handleSearch);
+    searchForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      console.log("Search input value:", searchInput.value);
+      await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
+    });
 
-  searchForm.addEventListener("submit", handleSearch);
-  searchButton.addEventListener("click", handleSearch);
-  priceFilter.addEventListener("change", handleSearch);
+    searchButton.addEventListener("click", async (event) => {
+      event.preventDefault();
+      console.log("Search input value:", searchInput.value);
+      await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
+    });
 
-  async function handleSearch(event) {
-    event.preventDefault();
-    await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
-  }
+    priceFilter.addEventListener("change", async () => {
+      await fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter);
+    });
+  };
 }
 
   async function fetchAndFilterCars(searchInput, carList, searchInfo, priceFilter) {
@@ -65,6 +61,9 @@ async function renderCars() {
         return;
       };
 
+      console.log("Selected Search Type Before Fetch:", selectedSearchType);
+      console.log("Search Value Before Fetch:", searchValue);
+
       carList.style.removeProperty("display");
       searchInfo.innerHTML = searchInputHTML(searchValue);
       searchValue = searchValue.charAt(0).toUpperCase() + searchValue.slice(1);
@@ -72,14 +71,16 @@ async function renderCars() {
       
       const response = await fetch(
         `https://myfakeapi.com/api/cars/${selectedSearchType}/${searchValue}`);
-        
+
+        console.log(`https://myfakeapi.com/api/cars/${selectedSearchType}/${searchValue}`)
+
         if (!response.ok)
           throw new Error(`HTTP error! status: ${response.status}`);
         
         const carsData = await response.json();
         console.log("Fetched cars data:", carsData);
         
-        if (carsData.Cars || Array.isArray(carsData.Cars) || carsData.Cars.length > 0) {
+        if (carsData.Cars && Array.isArray(carsData.Cars) && carsData.Cars.length > 0) {
           const selectedPriceRange = priceFilter.value.trim();
           let minPrice = 0, maxPrice = Infinity;
 
