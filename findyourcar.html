@@ -109,13 +109,25 @@
             <div class="search__toggle--container">
               <div class="search__toggle--bar">
                 <div class="toggle__slider"></div>
-                <button class="toggle__option toggle__active" onclick="selectOption(0)">Brand</button>
-                <button class="toggle__option" onclick="selectOption(1)">Model</button>
-                <button class="toggle__option" onclick="selectOption(2)">Year</button>
+                <button
+                  class="toggle__option toggle__active"
+                  onclick="selectOption(0)"
+                >
+                  Brand
+                </button>
+                <button class="toggle__option" onclick="selectOption(1)">
+                  Model
+                </button>
+                <button class="toggle__option" onclick="selectOption(2)">
+                  Year
+                </button>
               </div>
             </div>
             <div class="fyc-btn__search--container">
-              <button class="btn__search fyc-btn__search" onclick="renderCars()">
+              <button
+                class="btn__search fyc-btn__search"
+                onclick="renderCars()"
+              >
                 <i class="fas fa-search"></i>
               </button>
             </div>
@@ -133,9 +145,9 @@
           </h1>
         </div>
         <div class="price-filter__container">
-            <h2 class="price-title">
-              <span class="blue">Filter by price:</span>
-            </h2>
+          <h2 class="price-title">
+            <span class="blue">Filter by price:</span>
+          </h2>
           <form class="price__options--container">
             <select name="price__options" id="price" class="price__options">
               <option value="">Select your option...</option>

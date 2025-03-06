@@ -857,6 +857,9 @@ MEDIA RESPONSIVENESS
   .search__input--wrapper {
     width: 80%;
   }
+  .menu__backdrop {
+    height: 600px;
+  }
   .landing__animation--row {
     width: 768px;
   }
@@ -889,9 +892,6 @@ MEDIA RESPONSIVENESS
   .menu__btn {
     right: 80px;
   }
-  .menu__backdrop {
-    height: 490px;
-  }
   .title {
     font-size: 44px;
   }
@@ -903,8 +903,17 @@ MEDIA RESPONSIVENESS
     width: 80%;
     margin-bottom: 24px;
   }
+  .search__input {
+    height: 52px;
+  }
   .search__input::placeholder {
     font-size: 20px;
+  }
+  .btn__search {
+    height: 52px;
+  }
+  .menu__backdrop {
+    height: 530px;
   }
   .landing__animation--row {
     width: 576px;
@@ -983,7 +992,7 @@ MEDIA RESPONSIVENESS
     right: 49px;
   }
   .menu__backdrop {
-    height: 456px;
+    height: 426px;
   }
   .header__content {
     margin: 0 32px;
@@ -1016,7 +1025,7 @@ MEDIA RESPONSIVENESS
     text-align: center;
   }
   .btn__search {
-    margin: 0;
+    margin-left: 20px;
     height: 50px;
     width: 112px;
   }
@@ -1183,7 +1192,7 @@ MEDIA RESPONSIVENESS
     right: 49px;
   }
   .menu__backdrop {
-    height: 350px;
+    height: 330px;
   }
   .menu__link {
     font-size: 20px;
@@ -1287,7 +1296,7 @@ MEDIA RESPONSIVENESS
     font-size: 18px;
   }
   .search__toggle--bar {
-    width: 100%;
+    width: 300px;
   }
   .toggle__slider {
     width: calc(100% / 3);

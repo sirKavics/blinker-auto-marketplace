@@ -9,7 +9,7 @@
     </title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./index.js" defer></script>
-    <script scr="./search.js" defer></script>
+    <script src="./search.js" defer></script>
     <script
       src="https://kit.fontawesome.com/30b5de38f9.js"
       crossorigin="anonymous"
@@ -28,15 +28,23 @@
           </figure>
           <ul class="nav__link--list">
             <li class="nav__link">
-              <a href="./index.html" class="nav__link--anchor link__hover-effect">Home</a>
+              <a
+                href="./index.html"
+                class="nav__link--anchor link__hover-effect"
+                >Home</a
+              >
             </li>
             <li class="nav__link">
-              <a href="./findyourcar.html" class="nav__link--anchor link__hover-effect"
+              <a
+                href="./findyourcar.html"
+                class="nav__link--anchor link__hover-effect"
                 >Find your car</a
               >
             </li>
             <li class="nav__link">
-              <a href="#" class="nav__link--anchor btn__contact no-cursor">CONTACT</a>
+              <a href="#" class="nav__link--anchor btn__contact no-cursor"
+                >CONTACT</a
+              >
             </li>
           </ul>
         </div>
@@ -58,7 +66,9 @@
                 >
               </li>
               <li class="menu__list">
-                <a href="./findyourcar.html" class="menu__link link__hover-effect"
+                <a
+                  href="./findyourcar.html"
+                  class="menu__link link__hover-effect"
                   >Find your car</a
                 >
               </li>
@@ -80,23 +90,36 @@
             FIND YOUR DREAM CAR WITH <span class="blue">BLINKER</span>
           </h2>
           <div class="search__input--wrapper">
-          <form id="search__bar" action="findyourcar.html" onsubmit="renderCars()">
-            <div class="search-bar__container">
-              <input
-              class="search__input"
-              type="text"
-              placeholder="Search by Model, Make or Keyword"
-              />
-              <button class="btn__search">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
+            <form
+              id="search__bar"
+              action="findyourcar.html"
+              onsubmit="renderCars()"
+            >
+              <div class="search-bar__container">
+                <input
+                  class="search__input"
+                  type="text"
+                  placeholder="Search your car here"
+                />
+                <button class="btn__search" onclick="renderCars()">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
               <div class="search__toggle--container">
                 <div class="search__toggle--bar">
                   <div class="toggle__slider"></div>
-                  <button class="toggle__option toggle__active" onclick="selectOption(0)">Brand</button>
-                  <button class="toggle__option" onclick="selectOption(1)">Model</button>
-                  <button class="toggle__option" onclick="selectOption(2)">Year</button>
+                  <button
+                    class="toggle__option toggle__active"
+                    onclick="selectOption(0)"
+                  >
+                    Brand
+                  </button>
+                  <button class="toggle__option" onclick="selectOption(1)">
+                    Model
+                  </button>
+                  <button class="toggle__option" onclick="selectOption(2)">
+                    Year
+                  </button>
                 </div>
               </div>
             </form>
