@@ -1296,7 +1296,7 @@ MEDIA RESPONSIVENESS
     font-size: 18px;
   }
   .search__toggle--bar {
-    width: 300px;
+    width: 280px;
   }
   .toggle__slider {
     width: calc(100% / 3);
