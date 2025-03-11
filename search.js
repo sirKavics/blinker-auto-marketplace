@@ -115,7 +115,7 @@ async function renderCars() {
   }
 
 function carCardHTML(car) {
-  return `<div class="car__card no-cursor">
+  return `<div class="car__card cursor-pointer">
             <div class="car__card--container">
               <figure class="car__img--container">
                 <img
